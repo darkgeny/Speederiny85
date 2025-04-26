@@ -47,9 +47,9 @@ and
 <h3> On OpticSensor_send_speed_serial_simulation.ino<br>
 <code>
 You must set:
-	TakeValuesSerial TVSerial(<MAX_LENGTH_OF_VALUES>, &attiny85);
+	TakeValuesSerial TVSerial(_MAX_LENGTH_OF_VALUES_, &attiny85);
 And:
-	SoftwareSerial mySerial(<RX_PIN>, <TX_PIN>);
+	SoftwareSerial mySerial(_RX_PIN_, _TX_PIN_);
 </code>
 </h3>
 		
@@ -62,15 +62,15 @@ TakeValuesSerial.h<br>
 <h3> On OpticSensor_send_speed_serial.ino<br>
 <code>
 You must set:
-	OpticSensor20 optic(<SENSOR_PIN>, <INTERVAL_MILLISECOND_TAKING_VALUES>);
+	OpticSensor20 optic(_SENSOR_PIN_, _INTERVAL_MILLISECOND_TAKING_VALUES_);
 And:
-	SoftwareSerial mySerial(<RX_PIN>, <TX_PIN>);
+	SoftwareSerial mySerial(_RX_PIN_, _TX_PIN_);
 And comment or uncomment :
 	//#define LOCALSERIAL
 <br>
 On OpticSensor_wait_request_from_serial.ino<br>
 You must set:
-int maxchars=<MAX_LENGTH_OF_VALUES>;
+int maxchars=_MAX_LENGTH_OF_VALUES_;
 </code>
 </h3>
 
