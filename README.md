@@ -45,10 +45,12 @@ and
 <b>Run on Arduino/ESP</b>
 ------------------
 <h3> On OpticSensor_send_speed_serial_simulation.ino<br>
-<code>
 You must set:
+<code>
 	TakeValuesSerial TVSerial(_MAX_LENGTH_OF_VALUES_, &attiny85);
+</code>
 And:
+<code>
 	SoftwareSerial mySerial(_RX_PIN_, _TX_PIN_);
 </code>
 </h3>
