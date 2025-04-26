@@ -44,22 +44,22 @@ and
 ------------------
 <b>Run on Arduino/ESP</b>
 ------------------
-OpticSensor_send_speed_serial_simulation.ino<br>
+<h3> On OpticSensor_send_speed_serial_simulation.ino<br>
 <code>
 You must set:
 	TakeValuesSerial TVSerial(<MAX_LENGTH_OF_VALUES>, &attiny85);
 And:
 	SoftwareSerial mySerial(<RX_PIN>, <TX_PIN>);
 </code>
-
+</h3>
+		
 TakeValuesSerial.cpp<br>
 TakeValuesSerial.h<br>
-------------------
 
 ----------------
 <b>Run on Attiny 85</b>
 ----------------
-OpticSensor_send_speed_serial.ino
+<h3> On OpticSensor_send_speed_serial.ino
 <code>
 You must set:
 	OpticSensor20 optic(<SENSOR_PIN>, <INTERVAL_MILLISECOND_TAKING_VALUES>);
@@ -72,17 +72,17 @@ OpticSensor_wait_request_from_serial.ino
 You must set:
 int maxchars=<MAX_LENGTH_OF_VALUES>;
 </code>
+</h3>
 
 OpticSensor20.cpp<br>
 OpticSensor20.h<br>
-----------------
 
 -----------
 Common code
 -----------
 SoftwareSerial.cpp
 SoftwareSerial.h
------------
+
 ![Speederiny85](https://github.com/user-attachments/assets/433564c1-a1d9-42a3-a2e4-7479f0819c1b)
 
 
