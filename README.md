@@ -3,8 +3,9 @@ Speederiny85
 ------------
 Manage Optic Sensor via Serial delegating Attiny-85
 
-I need to delegate an 85 hour to the reading of an infrared optical sensor (type 20 windows)<br>
+I need to delegate an Attiny 85 to the reading of a classic infrared optical sensor (type 20 windows)<br>
 to calculate the speed and steps taken during an interval of time.
+
 This way, in my main program in the main controller I can read the values
 without going out of time, basically in a kind of multitasking.
 
@@ -41,7 +42,7 @@ and
 #p<steps>#
 
 ------------------
-Run on Arduino/ESP
+<b>Run on Arduino/ESP</b>
 ------------------
 OpticSensor_send_speed_serial_simulation.ino
 You must set:
@@ -54,7 +55,7 @@ TakeValuesSerial.h
 ------------------
 
 ----------------
-Run on Attiny 85
+<b>Run on Attiny 85</b>
 ----------------
 OpticSensor_send_speed_serial.ino
 You must set:
