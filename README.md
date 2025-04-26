@@ -9,26 +9,27 @@ This way, in my main program in the main controller I can read the values
 without going out of time, basically in a kind of multitasking.
 
 Author: Giacomo Catanzariti darkgeny@gmail.com<br>
-Name: OpticSensor
+Name: Speederiny85 Optic Sensor controller<br>
 Purpose: control the rotation speed and steps of the path
-of optoelectric sensor and enable client-server simple serial communication
-Operational commands:
-1) #s = Send via serial: the number of occurrences coming from the optical sensor during an interval of milliseconds
-2) #S = Receives via serial: any number and consequently sets the interval in milliseconds in the range 100-10000
-3) #p = Send via serial: the number of steps taken after the reset
-4) #P = Receives via serial: the step count reset command
-Note: Set the sensor pin and serial speed
-Please note: for attiny 85 set serial rate to 38400 baud
+of optoelectric sensor and enable client-server simple serial communication<br>
 
-Name: TakeValuesSerial
-Purpose: take values from "OpticSensor_send_speed_serial" that control the rotation speed and steps of the path
-of optoelectric sensor and enable client-server simple serial communication
-Operational commands:
-1) #s = will receive actual speed from sensor
-2) #S<num> = set interval resolution for taking sensor speed on sensor
-3) #p = will receive actual steps gathered from sensor
-4) #P = reset to ZERO gathered steps on sensor
-Note:
+Operational commands:<br>
+1) #s = Send via serial: the number of occurrences coming from the optical sensor during an interval of milliseconds<br>
+2) #S = Receives via serial: any number and consequently sets the interval in milliseconds in the range 100-10000<br>
+3) #p = Send via serial: the number of steps taken after the reset<br>
+4) #P = Receives via serial: the step count reset command<br><br>
+Note: Set the sensor pin and serial speed<br>
+Please note: for attiny 85 set serial rate to 38400 baud<br>
+<br>
+Name: TakeValuesSerial<br>
+Purpose: take values from "OpticSensor_send_speed_serial" that control the rotation speed and steps of the path<br>
+of optoelectric sensor and enable client-server simple serial communication<br><br>
+Operational commands:<br>
+1) #s = will receive actual speed from sensor<br>
+2) #S<num> = set interval resolution for taking sensor speed on sensor<br>
+3) #p = will receive actual steps gathered from sensor<br>
+4) #P = reset to ZERO gathered steps on sensor<br><br>
+Note:<br>
 values received are formatted so:
 
 #s<speed>#
