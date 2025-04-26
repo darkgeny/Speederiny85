@@ -3,13 +3,12 @@ Speederiny85
 ------------
 Manage Optic Sensor via Serial delegating Attiny-85
 
-I need to delegate an 85 hour to the reading of an infrared optical sensor
+I need to delegate an 85 hour to the reading of an infrared optical sensor (type 20 windows)<br>
 to calculate the speed and steps taken during an interval of time.
 This way, in my main program in the main controller I can read the values
 without going out of time, basically in a kind of multitasking.
 
-Author: Giacomo Catanzariti darkgeny@gmail.com<br>
-Name: Speederiny85 Optic Sensor controller<br>
+Name: OpticSensor20<br>
 Purpose: control the rotation speed and steps of the path
 of optoelectric sensor and enable client-server simple serial communication<br>
 
