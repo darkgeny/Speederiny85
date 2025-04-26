@@ -59,7 +59,7 @@ TakeValuesSerial.h<br>
 ----------------
 <b>Run on Attiny 85</b>
 ----------------
-<h3> On OpticSensor_send_speed_serial.ino
+<h3> On OpticSensor_send_speed_serial.ino<br>
 <code>
 You must set:
 	OpticSensor20 optic(<SENSOR_PIN>, <INTERVAL_MILLISECOND_TAKING_VALUES>);
@@ -67,8 +67,8 @@ And:
 	SoftwareSerial mySerial(<RX_PIN>, <TX_PIN>);
 And comment or uncomment :
 	//#define LOCALSERIAL
-
-OpticSensor_wait_request_from_serial.ino
+<br>
+On OpticSensor_wait_request_from_serial.ino<br>
 You must set:
 int maxchars=<MAX_LENGTH_OF_VALUES>;
 </code>
