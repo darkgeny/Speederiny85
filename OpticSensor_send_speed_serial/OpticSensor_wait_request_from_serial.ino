@@ -1,16 +1,18 @@
-/*
-Author: Giacomo Catanzariti darkgeny@gmail.com
-Name: OpticSensor
-Purpose: control the rotation speed and steps of the path
-of optoelectric sensor and enable client-server simple serial communication
-Operational commands:
-1) #s = Send via serial: the number of occurrences coming from the optical sensor during an interval of milliseconds
-2) #S = Receives via serial: any number and consequently sets the interval in milliseconds in the range 100-10000
-3) #p = Send via serial: the number of steps taken after the reset
-4) #P = Receives via serial: the step count reset command
-Note: Set the sensor pin and serial speed
-Please note: for attiny 85 set serial rate to 38400 baud
-*/
+/**************************************************************************
+    Author: Giacomo Catanzariti darkgeny@gmail.com
+    Name: OpticSensor
+    Purpose: control the rotation speed and steps of the path
+    of optoelectric sensor and enable client-server simple serial communication
+    Operational commands:
+    1) #s = Send via serial: the number of occurrences coming from the optical
+    sensor during an interval of milliseconds
+    2) #S = Receives via serial: any number and consequently sets the interval
+    in milliseconds in the range 100-10000
+    3) #p = Send via serial: the number of steps taken after the reset
+    4) #P = Receives via serial: the step count reset command
+    Note: Set the sensor pin and serial speed
+    Please note: for attiny 85 set serial rate to 38400 baud
+**************************************************************************/
 
 int maxchars=7;
 

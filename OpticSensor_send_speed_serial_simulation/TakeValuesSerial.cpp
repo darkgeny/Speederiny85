@@ -1,21 +1,24 @@
-/*Author: Giacomo Catanzariti darkgeny@gmail.com
-Name: TakeValuesSerial
-Purpose: take values from "OpticSensor_send_speed_serial" that control the rotation speed and steps of the path
-of optoelectric sensor and enable client-server simple serial communication
-Operational commands:
-1) #s = will receive actual speed from sensor
-2) #S<num> = set interval resolution for taking sensor speed on sensor
-3) #p = will receive actual steps gathered from sensor
-4) #P = reset to ZERO gathered steps on sensor
-Note:
-values received are formatted so:
+/**********************************************
+    https://github.com/darkgeny/Speederiny85
+    Author: Giacomo Catanzariti darkgeny@gmail.com
+    Name: TakeValuesSerial
+    Purpose: take values from "OpticSensor_send_speed_serial" that control the rotation speed and steps of the path
+    of optoelectric sensor and enable client-server simple serial communication
+    Operational commands:
+    1) #s = will receive actual speed from sensor
+    2) #S<num> = set interval resolution for taking sensor speed on sensor
+    3) #p = will receive actual steps gathered from sensor
+    4) #P = reset to ZERO gathered steps on sensor
+    Note:
+    values received are formatted so:
 
-#s<speed>#
+    #s<speed>#
 
-and 
+    and 
 
-#p<steps>#
-*/
+    #p<steps>#
+*********************************************/
+
 #include "TakeValuesSerial.h"
 //
 TakeValuesSerial::TakeValuesSerial(){};

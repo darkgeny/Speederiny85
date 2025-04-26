@@ -1,4 +1,8 @@
-// Author: Giacomo Catanzariti <darkgeny@gmail.com>
+/***************************************************
+    Author: Giacomo Catanzariti <darkgeny@gmail.com>
+    https://github.com/darkgeny/Speederiny85
+/**************************************************/
+
 #ifndef TAKEVALUESSERIAL_H
 #define TAKEVALUESSERIAL_H
 #include "Arduino.h"

@@ -1,4 +1,8 @@
-// Author: Giacomo Catanzariti <darkgeny@gmail.com>
+/***************************************************
+    Author: Giacomo Catanzariti <darkgeny@gmail.com>
+    https://github.com/darkgeny/Speederiny85
+/**************************************************/
+
 #ifndef OPTICSENSOR20_H
 #define OPTICSENSOR20_H
 #include "Arduino.h"

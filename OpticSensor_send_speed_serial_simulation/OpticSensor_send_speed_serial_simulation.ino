@@ -1,3 +1,8 @@
+/***************************************************
+    Author: Giacomo Catanzariti <darkgeny@gmail.com>
+    https://github.com/darkgeny/Speederiny85
+/**************************************************/
+
 #include "TakeValuesSerial.h"
 #include "SoftwareSerial.h"
 

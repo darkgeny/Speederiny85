@@ -1,3 +1,8 @@
+/***************************************************
+    Author: Giacomo Catanzariti <darkgeny@gmail.com>
+    https://github.com/darkgeny/Speederiny85
+/**************************************************/
+
 #include "SoftwareSerial.h"
 #include "OpticSensor20.h"
 //
