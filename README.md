@@ -8,7 +8,7 @@ to calculate the speed and steps taken during an interval of time.
 This way, in my main program in the main controller I can read the values
 without going out of time, basically in a kind of multitasking.
 
-Author: Giacomo Catanzariti darkgeny@gmail.com
+Author: Giacomo Catanzariti darkgeny@gmail.com<br>
 Name: OpticSensor
 Purpose: control the rotation speed and steps of the path
 of optoelectric sensor and enable client-server simple serial communication
