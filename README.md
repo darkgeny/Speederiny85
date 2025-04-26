@@ -18,17 +18,20 @@ Operational commands:<br>
 2) #S = Receives via serial: any number and consequently sets the interval in milliseconds in the range 100-10000<br>
 3) #p = Send via serial: the number of steps taken after the reset<br>
 4) #P = Receives via serial: the step count reset command<br><br>
+
 Note: Set the sensor pin and serial speed<br>
 Please note: for attiny 85 set serial rate to 38400 baud<br>
 <br>
 Name: TakeValuesSerial<br>
 Purpose: take values from "OpticSensor_send_speed_serial" that control the rotation speed and steps of the path<br>
 of optoelectric sensor and enable client-server simple serial communication<br><br>
+
 Operational commands:<br>
 1) #s = will receive actual speed from sensor<br>
 2) #S<num> = set interval resolution for taking sensor speed on sensor<br>
 3) #p = will receive actual steps gathered from sensor<br>
 4) #P = reset to ZERO gathered steps on sensor<br><br>
+
 Note:<br>
 values received are formatted so:
 
