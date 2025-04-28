@@ -96,11 +96,11 @@ SoftwareSerial.h
 ![Speederiny85](https://github.com/user-attachments/assets/433564c1-a1d9-42a3-a2e4-7479f0819c1b)
 
 Note well from the scheme, with a double serial: to have a multiserial operation, it is not possible simultaneously.<br>
-So for those projects that require a multiserial I/O, this code is not needed.<br>
+So for those projects type, which require simltaneity of multiserial I/O, this code is not working for.<br>
 <br>
-But this code is useful if you want to query a series of serial ports in sequence, without any delay or lag.<br>
+<b>But</b> this code is useful if you want to query a series of serial ports in sequence, without any delay or lag.<br>
 So you can read and write sequentially on ALL SERIAL PORTS *without having to open and close them*,<br>
-just listen to read and write on any door, at any time, but not at the same time, just in sequence.
+just listen to read and write on any port, at any time, but not at the same time, just in sequence.
 <br>
 
 ![Speederiny85_dual_serial](https://github.com/user-attachments/assets/c526c86d-7368-4cb2-8f7a-ec7d0d046a9d)
