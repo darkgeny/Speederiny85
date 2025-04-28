@@ -56,6 +56,7 @@ void TakeValuesSerial::take(){
                 case 's': //save last speed
                     speed = valuetmp.substring( 2, valuetmp.length()-1 ).toInt();
                     taked_speed = true;
+                    serial_flow_started = true;
                     break;
                 case 'p': //save last steps
                     steps = valuetmp.substring( 2, valuetmp.length()-1 ).toInt();
@@ -71,9 +72,10 @@ void TakeValuesSerial::take(){
 void TakeValuesSerial::reset_vars(){
   valuetmp="";
   cnt_char = 0;
+  set_remote_speed_interval();
 }
 bool TakeValuesSerial::isNumeric(String str){
-  int cnt=0;
+  uint8_t cnt=0;
   for(byte i=2;i<str.length()-1;i++)
     if(isDigit(str.charAt(i))) cnt++;
   if( cnt == ( str.length() -3 ) )
@@ -95,4 +97,22 @@ bool TakeValuesSerial::have_taked_steps(){
   bool last_status = taked_steps;
   taked_steps = false;
   return last_status;
+}
+void TakeValuesSerial::set_local_speed_interval(unsigned long si){
+  remote_speed_interval = si;
+}
+/*Sometimes Attiny activates the serial slowly,
+so if you want to set the interval in the setup,
+better be sure that the serial has started.
+This function is called ALWAYS, but it sends
+the command only if the serial number is started
+and the value is greater than 9
+*/
+void TakeValuesSerial::set_remote_speed_interval(){
+  if( !serial_flow_started || remote_speed_interval < 10 )
+    return;
+  char rsint[20];
+  sprintf(rsint,"#S%d\n", (int)remote_speed_interval );
+  tvserial->write( rsint );
+  remote_speed_interval = 0; //one time setted and not over
 }
