@@ -99,7 +99,7 @@ Note well from the scheme, with a double serial: to have a multiserial operation
 So for those projects that require a multiserial I/O, this code is not needed.<br>
 <br>
 But this code is useful if you want to query a series of serial ports in sequence, without any delay or lag.<br>
-So you can read and write sequentially on all doors without having to open and close them,<br>
+So you can read and write sequentially on ALL SERIAL PORTS *without having to open and close them*,<br>
 just listen to read and write on any door, at any time, but not at the same time, just in sequence.
 <br>
 
