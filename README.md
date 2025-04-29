@@ -9,6 +9,28 @@ to calculate the speed and steps taken during an interval of time.
 This way, in my main program in the main controller I can read the values
 without going out of time, basically in a kind of multitasking.
 
+In this is the loop example show a deferred reading from 2 serial ports *simultaneously* (sequentially):
+
+<code>
+void loop(){
+  optic_A.update();
+  optic_B.update();
+
+  if( optic_A.have_taked_speed() )
+    sA = optic_A.get_speed();
+  if( optic_B.have_taked_speed() )
+    sB = optic_B.get_speed();
+  if( optic_A.have_taked_steps() )
+    pA = optic_A.get_steps();
+  if( optic_B.have_taked_steps() )
+    pB = optic_B.get_steps();
+
+  // |   speed A |   speed B |   steps A |   steps B |
+  sprintf(row, "| %7d | %7d | %7lu | %7lu |", sA, sB, pA, pB );
+  Serial.println( row );
+}
+</code>
+
 Name: OpticSensor20<br>
 Purpose: control the rotation speed and steps of the path
 of optoelectric sensor and enable client-server simple serial communication<br>
