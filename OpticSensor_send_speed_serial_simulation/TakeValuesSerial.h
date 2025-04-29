@@ -11,7 +11,7 @@
 class TakeValuesSerial {
   public:
     TakeValuesSerial();
-    TakeValuesSerial(uint8_t, SoftwareSerial *);
+    TakeValuesSerial( SoftwareSerial * );
     void take();
     int get_speed();
     unsigned long get_steps();

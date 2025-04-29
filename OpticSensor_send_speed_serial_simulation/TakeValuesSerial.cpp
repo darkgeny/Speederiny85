@@ -22,10 +22,10 @@
 #include "TakeValuesSerial.h"
 //
 TakeValuesSerial::TakeValuesSerial(){};
-TakeValuesSerial::TakeValuesSerial(uint8_t mc, SoftwareSerial *ser){//max chars
+TakeValuesSerial::TakeValuesSerial( SoftwareSerial *ser ){
   valuetmp="";
   value="";
-  maxchars = mc;
+  maxchars = 7; //maximum number of char readed from remote serial attiny
   cnt_char = 0;
   speed = 0;
   steps = 0;
