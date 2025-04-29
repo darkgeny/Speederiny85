@@ -34,6 +34,7 @@ TakeValuesSerial::TakeValuesSerial(uint8_t mc, SoftwareSerial *ser){//max chars
   commands[0] = 's';
   commands[1] = 'p';
   tvserial = ser;
+  tvserial->begin(38400);
 }
 void TakeValuesSerial::take(){
   char c = '\0';
@@ -115,4 +116,13 @@ void TakeValuesSerial::set_remote_speed_interval(){
   sprintf(rsint,"#S%d\n", (int)remote_speed_interval );
   tvserial->write( rsint );
   remote_speed_interval = 0; //one time setted and not over
+}
+void TakeValuesSerial::update(){
+  if( !tvserial->isListening() )
+    tvserial->listen();
+    tvserial->write( "#s\n" );
+    delay(2);
+    tvserial->write( "#p\n" );
+    delay(2);
+  take();
 }

@@ -19,6 +19,7 @@ class TakeValuesSerial {
     bool have_taked_steps(); //callme and I change status
     void set_local_speed_interval(unsigned long);
     SoftwareSerial *tvserial;
+    void update();
   private:
     void set_remote_speed_interval();
     bool serial_flow_started;
