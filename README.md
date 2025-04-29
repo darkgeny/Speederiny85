@@ -9,28 +9,45 @@ to calculate the speed and steps taken during an interval of time.
 This way, in my main program in the main controller I can read the values
 without going out of time, basically in a kind of multitasking.
 
-In this is the loop example show a deferred reading from 2 serial ports *simultaneously* (sequentially):
+In this is the loop example show a deferred reading from 2 serial ports *simultaneously* (sequentially).
+
+As you can see, the speed value and steps value are changed locally only if there has been an actual change
+in the remote attiny. Otherwise, the speed and steps value remains the last value detected.
+
+There is no delay, except for 2 milliseconds for each speed-update and 2 milliseconds for each steps-update.
+
+Therefore -see update() function- in this specific case, there is a total of 8 milliseconds of delay for each loop() cycle.
 
 <code>
-void loop(){
+#include "TakeValuesSerial.h"
+<br>
+SoftwareSerial tiny85_A(2, 3); // RX, TX
+SoftwareSerial tiny85_B(4, 5); // RX, TX
+<br>
+TakeValuesSerial optic_A(7, &tiny85_A);
+TakeValuesSerial optic_B(7, &tiny85_B);
+<br>
+void loop()
+{
   optic_A.update();
   optic_B.update();
-
+<br>
   if( optic_A.have_taked_speed() )
     sA = optic_A.get_speed();
   if( optic_B.have_taked_speed() )
     sB = optic_B.get_speed();
+<br>
   if( optic_A.have_taked_steps() )
     pA = optic_A.get_steps();
   if( optic_B.have_taked_steps() )
     pB = optic_B.get_steps();
-
+<br>
   // |   speed A |   speed B |   steps A |   steps B |
   sprintf(row, "| %7d | %7d | %7lu | %7lu |", sA, sB, pA, pB );
   Serial.println( row );
 }
 </code>
-
+<br>
 Name: OpticSensor20<br>
 Purpose: control the rotation speed and steps of the path
 of optoelectric sensor and enable client-server simple serial communication<br>
