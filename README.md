@@ -27,6 +27,10 @@ SoftwareSerial tiny85_B(4, 5); // RX, TX
 TakeValuesSerial optic_A(7, &tiny85_A);
 TakeValuesSerial optic_B(7, &tiny85_B);
 <br>
+char row[] = "                                                 ";
+int sA=0,sB=0;
+unsigned long pA=0,pB=0;
+<br>
 void loop()
 {
   optic_A.update();
