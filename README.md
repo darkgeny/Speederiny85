@@ -24,8 +24,8 @@ Therefore -see update() function- in this specific case, there is a total of 8 m
 SoftwareSerial tiny85_A(2, 3); // RX, TX
 SoftwareSerial tiny85_B(4, 5); // RX, TX
 <br>
-TakeValuesSerial optic_A(7, &tiny85_A);
-TakeValuesSerial optic_B(7, &tiny85_B);
+TakeValuesSerial optic_A( &tiny85_A );
+TakeValuesSerial optic_B( &tiny85_B );
 <br>
 char row[] = "                                                 ";
 int sA=0,sB=0;
