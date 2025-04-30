@@ -14,9 +14,15 @@ In this is the loop example show a deferred reading from 2 serial ports *simulta
 As you can see, the speed value and steps value are changed locally only if there has been an actual change
 in the remote attiny. Otherwise, the speed and steps value remains the last value detected.
 
-There is no delay, except for 2 milliseconds for each speed-update and 2 milliseconds for each steps-update.
+There is no delay in ESP32 client.
 
-Therefore -see update() function- in this specific case, there is a total of 8 milliseconds of delay for each loop() cycle.
+On Arduino client there is a 2 milliseconds deley for each speed-update and 2 milliseconds for each steps-update,<br>
+therefore -see update() function- in this specific case, there is a total of 8 milliseconds of delay for each loop() cycle.
+
+ESP32 client using second and third UART with HardwareSerial library (included in Arduino IDE).
+Arduino using any serial with SoftwareSerial library (included here in GPL license).
+
+<h3>ARDUINO CLIENT Example</h3>
 
 <code>
 #include "TakeValuesSerial.h"
@@ -148,3 +154,6 @@ just listen to read and write on any port, at any time, but not at the same time
 
 ![Speederiny85_dual_serial](https://github.com/user-attachments/assets/c526c86d-7368-4cb2-8f7a-ec7d0d046a9d)
 
+<h3>ESP32 Client</h3>
+
+![Speederiny_ESP32](https://github.com/user-attachments/assets/f96e5df4-fcd9-4c11-bf09-34c87e9cc40e)
