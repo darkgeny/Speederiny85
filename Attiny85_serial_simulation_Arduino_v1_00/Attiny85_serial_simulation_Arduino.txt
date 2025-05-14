@@ -1,0 +1,11 @@
+1.flash on Attiny85
+-board: Digispark
+-com: no com, using Sketch->Load by programmer
+2.flash on Arduino
+-board: Arduino UNO
+-com: select
+3.test on serial Arduino
+-write:
+#C1034#;#c2034#;#N3034#;#n4034#;#M5034#;#m6034#;#D7034#;#d8034#;#R9034#;#X1134#;#x1234#;#A1334#;#B1434#;
+
+
