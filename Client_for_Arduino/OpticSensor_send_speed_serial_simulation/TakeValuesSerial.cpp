@@ -1,6 +1,6 @@
 /**********************************************
     https://github.com/darkgeny/Speederiny85
-    Author: Giacomo Catanzariti darkgeny@gmail.com
+    Author: Giacomo Catanzariti
     Name: TakeValuesSerial
     Purpose: take values from "OpticSensor_send_speed_serial" that control the rotation speed and steps of the path
     of optoelectric sensor and enable client-server simple serial communication
