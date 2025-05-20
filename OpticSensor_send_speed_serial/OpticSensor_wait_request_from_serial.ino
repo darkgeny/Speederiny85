@@ -1,5 +1,5 @@
 /**************************************************************************
-    Author: Giacomo Catanzariti darkgeny@gmail.com
+    Author: Giacomo Catanzariti
     Name: OpticSensor
     Purpose: control the rotation speed and steps of the path
     of optoelectric sensor and enable client-server simple serial communication
