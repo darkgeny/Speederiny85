@@ -1,5 +1,5 @@
 /***************************************************
-    Author: Giacomo Catanzariti <darkgeny@gmail.com>
+    Author: Giacomo Catanzariti
     https://github.com/darkgeny/Speederiny85
 /**************************************************/
 
